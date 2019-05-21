@@ -37,6 +37,7 @@
 <input type="text" id="username" bind:this={usernameInput}>
 <button on:click="{saveData}">Save</button>
 
+<p> bind:this= To be used for reading values from bound DOM elements </p>
 <div bind:this={someDiv}>some text</div>
 
 <hr>
