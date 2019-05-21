@@ -12,6 +12,14 @@
   let usernameInput;
   let someDiv;
   let customInput;
+  let enteredEmail = '';
+  let formIsValid = false;
+
+    $: if (enteredEmail.includes('@')) {
+        formIsValid = true;
+    } else {
+        formIsValid = false;
+    }
 
   $: console.log(val);
   $: console.log(selectedOption);
@@ -35,6 +43,14 @@
   }
 </script>
 
+<h1>Svelte Form & Input Validation</h1>
+
+<form on:submit|preventDefault>
+<input type="email" bind:value="{enteredEmail}">
+<button type="submit" disabled={!formIsValid} >Email</button>
+</form>
+
+<hr>
 <h1>Binding to Element References</h1>
 
 <input type="text" id="username" bind:this={usernameInput}>
