@@ -10,6 +10,7 @@
   let acceptedCurrencies = ["JS","Smiles","Hughs", "CAD"];
   let singleFavCurrency = 'likes';
   let usernameInput;
+  let someDiv;
 
   $: console.log(val);
   $: console.log(selectedOption);
@@ -27,6 +28,7 @@
     //   console.log(document.querySelector('#username').value);    // Vanilla JS option
     console.log(usernameInput.value);
     console.dir(usernameInput);
+    console.dir(someDiv);
   }
 </script>
 
@@ -34,6 +36,8 @@
 
 <input type="text" id="username" bind:this={usernameInput}>
 <button on:click="{saveData}">Save</button>
+
+<div bind:this={someDiv}>some text</div>
 
 <hr>
 <h1>Trading Options</h1>
