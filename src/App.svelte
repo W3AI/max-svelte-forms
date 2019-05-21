@@ -28,7 +28,9 @@
   value={price}
   on:input={event => console.log(1 + event.target.value)} /> -->
 
-  <input
-  type="number"
-  bind:value={price}
-  />
+<input type="number" bind:value={price} />
+
+<label>
+  <input type="checkbox" />
+  Agree to terms?
+</label>
