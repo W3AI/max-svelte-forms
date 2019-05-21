@@ -6,13 +6,15 @@
   let price = 0;
   let selectedOption = 1;
   let agreed;
-  let favCurrency = 'Tims';
+  let favCurrency = "Tims";
+  let acceptedCurrencies = "Tims";
 
   $: console.log(val);
   $: console.log(selectedOption);
   $: console.log(price);
   $: console.log(agreed);
   $: console.log(favCurrency);
+  $: console.log(acceptedCurrencies);
 
   function setValue(event) {
     val = event.target.value;
@@ -35,18 +37,40 @@
 <input type="number" bind:value={price} />
 
 <label>
-  <input type="checkbox" bind:checked={agreed}/>
+  <input type="checkbox" bind:checked={agreed} />
   Agree to terms?
 </label>
 
-<hr>
+<hr />
 <h1>Favorite Currency?</h1>
 <label>
-    <input type="radio" name="currency" value="USD" bind:group={favCurrency}> USD
+  <input type="radio" name="currency" value="USD" bind:group={favCurrency} />
+  USD
 </label>
 <label>
-    <input type="radio" name="currency" value="CAD" bind:group={favCurrency}> CAD
+  <input type="radio" name="currency" value="CAD" bind:group={favCurrency} />
+  CAD
 </label>
 <label>
-    <input type="radio" name="currency" value="Tims" bind:group={favCurrency}> coffee
+  <input type="radio" name="currency" value="Tims" bind:group={favCurrency} />
+  coffee
+</label>
+
+<hr />
+<h1>Accepted Currencies</h1>
+<label>
+  <input type="checkbox" name="accepted" value="USD" bind:group={acceptedCurrencies} />
+  USD
+</label>
+<label>
+  <input type="checkbox" name="accepted" value="CAD" bind:group={acceptedCurrencies} />
+  CAD
+</label>
+<label>
+  <input
+    type="checkbox"
+    name="accepted"
+    value="Tims"
+    bind:group={acceptedCurrencies} />
+  coffee
 </label>
