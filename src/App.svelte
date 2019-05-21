@@ -11,6 +11,7 @@
   let singleFavCurrency = 'likes';
   let usernameInput;
   let someDiv;
+  let customInput;
 
   $: console.log(val);
   $: console.log(selectedOption);
@@ -19,6 +20,7 @@
   $: console.log(favCurrency);
   $: console.log(acceptedCurrencies);
   $: console.log(singleFavCurrency);
+  $: console.log(customInput);
 
   function setValue(event) {
     val = event.target.value;
@@ -29,6 +31,7 @@
     console.log(usernameInput.value);
     console.dir(usernameInput);
     console.dir(someDiv);
+    customInput.empty();
   }
 </script>
 
@@ -106,7 +109,7 @@
 
 <!-- <input type="text" value={val} on:input={setValue}> -->
 <!-- <input type="text" bind:value={val}> -->
-<CustomInput type="text" bind:val />
+<CustomInput type="text" bind:val bind:this={customInput} />
 
 <!-- Avoid 2 way binding everywhere except forms and the like -->
 <!-- To avoid introducing errors / complex behaviors, etc -->
