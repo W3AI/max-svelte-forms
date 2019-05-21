@@ -5,10 +5,12 @@
   let val = "Stef";
   let price = 0;
   let selectedOption = 1;
+  let agreed;
 
   $: console.log(val);
   $: console.log(selectedOption);
   $: console.log(price);
+  $: console.log(agreed);
 
   function setValue(event) {
     val = event.target.value;
@@ -31,6 +33,6 @@
 <input type="number" bind:value={price} />
 
 <label>
-  <input type="checkbox" />
+  <input type="checkbox" bind:checked={agreed}/>
   Agree to terms?
 </label>
