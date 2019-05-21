@@ -7,7 +7,7 @@
   let selectedOption = 1;
   let agreed;
   let favCurrency = "Tims";
-  let acceptedCurrencies = "Tims";
+  let acceptedCurrencies = ["Tims"];
 
   $: console.log(val);
   $: console.log(selectedOption);
@@ -58,6 +58,30 @@
 
 <hr />
 <h1>Accepted Currencies</h1>
+<label>
+  <input
+    type="checkbox"
+    name="accepted"
+    value="Smiles"
+    bind:group={acceptedCurrencies} />
+  smiles :-)
+</label>
+<label>
+  <input
+    type="checkbox"
+    name="accepted"
+    value="Hughs"
+    bind:group={acceptedCurrencies} />
+  hughs
+</label>
+<label>
+  <input
+    type="checkbox"
+    name="accepted"
+    value="Shares"
+    bind:group={acceptedCurrencies} />
+  shares
+</label>
 <label>
   <input type="checkbox" name="accepted" value="USD" bind:group={acceptedCurrencies} />
   USD
