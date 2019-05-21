@@ -26,6 +26,7 @@
   function saveData() {
     //   console.log(document.querySelector('#username').value);    // Vanilla JS option
     console.log(usernameInput.value);
+    console.dir(usernameInput);
   }
 </script>
 
