@@ -25,4 +25,4 @@
 <input
   type="number"
   value={price}
-  on:input={event => console.log(event.target.value)} />
+  on:input={event => console.log(1 + event.target.value)} />
