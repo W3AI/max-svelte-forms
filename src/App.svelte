@@ -8,6 +8,7 @@
 
   $: console.log(val);
   $: console.log(selectedOption);
+  $: console.log(price);
 
   function setValue(event) {
     val = event.target.value;
@@ -22,7 +23,12 @@
 <!-- To avoid introducing errors / complex behaviors, etc -->
 <Toggle bind:chosenOption={selectedOption} />
 
-<input
+<!-- <input
   type="number"
   value={price}
-  on:input={event => console.log(1 + event.target.value)} />
+  on:input={event => console.log(1 + event.target.value)} /> -->
+
+  <input
+  type="number"
+  bind:value={price}
+  />
