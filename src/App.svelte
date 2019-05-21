@@ -9,6 +9,7 @@
   let favCurrency = "Tims";
   let acceptedCurrencies = ["JS","Smiles","Hughs", "CAD"];
   let singleFavCurrency = 'likes';
+  let usernameInput;
 
   $: console.log(val);
   $: console.log(selectedOption);
@@ -21,8 +22,19 @@
   function setValue(event) {
     val = event.target.value;
   }
+
+  function saveData() {
+    //   console.log(document.querySelector('#username').value);    // Vanilla JS option
+    console.log(usernameInput.value);
+  }
 </script>
 
+<h1>Binding to Element References</h1>
+
+<input type="text" id="username" bind:this={usernameInput}>
+<button on:click="{saveData}">Save</button>
+
+<hr>
 <h1>Trading Options</h1>
 <h3>List of options can be set dynamicall with #each}</h3> 
 <h3>values can be objects too: e.g.: projects or services</h3>
