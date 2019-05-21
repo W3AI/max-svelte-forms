@@ -51,6 +51,7 @@
 </style>
 
 <h1>Svelte Form & Input Validation</h1>
+<p>To consider packages like validate.js / https://validatejs.org/</p>
 
 <form on:submit|preventDefault>
 <input type="email" bind:value="{enteredEmail}" class={isValidEmail(enteredEmail) ? '' : 'invalid'}>
