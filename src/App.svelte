@@ -8,6 +8,7 @@
   let agreed;
   let favCurrency = "Tims";
   let acceptedCurrencies = ["JS","Smiles","Hughs", "CAD"];
+  let singleFavCurrency = 'likes';
 
   $: console.log(val);
   $: console.log(selectedOption);
@@ -15,12 +16,23 @@
   $: console.log(agreed);
   $: console.log(favCurrency);
   $: console.log(acceptedCurrencies);
+  $: console.log(singleFavCurrency);
 
   function setValue(event) {
     val = event.target.value;
   }
 </script>
 
+<h1>Trading Options</h1>
+<h3>List of options can be set dynamicall with #each}</h3> 
+<h3>values can be objects too: e.g.: projects or services</h3>
+<select bind:value={singleFavCurrency}>
+    <option value="citations">Citations</option>
+    <option value="likes">Likes</option>
+    <option value="beers">Beers</option>
+    <option value="bitcoins">Bitcoins</option>
+</select>
+<hr />
 <h1>Accepted Currencies</h1>
 <label>
   <input
@@ -109,7 +121,6 @@
   coffee
 </label>
 
-<hr />
 
 
 
