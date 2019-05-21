@@ -1,5 +1,15 @@
 <script>
+    import CustomInput from './CustomInput.svelte';
 
+    let val = 'Stef';
+
+    $: console.log(val);
+
+    function setValue(event) {
+        val = event.target.value;
+    }
 </script>
 
-<h1>Bindings & Forms</h1>
+<!-- <input type="text" value={val} on:input={setValue}> -->
+<!-- <input type="text" bind:value={val}> -->
+<CustomInput bind:val={val} />
